@@ -10,7 +10,14 @@ class EmpleadoController extends Controller
     public function index(){
     	$empleados=Empleado::all();	
 
-    	return view('empleados.Empleados',['empleados'=>$empleados]);
+    	return view('empleados/Empleados')->with(['empleados'=>$empleados]);
+    }
+    public function show($id){
+
+    	$empleados=Empleado::where('id',$id)->get();
+
+    	return view('empleados/Empleado')->with(['empleados'=>$empleados]);
+
     }
 }
 

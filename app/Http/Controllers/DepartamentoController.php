@@ -12,4 +12,12 @@ class DepartamentoController extends Controller
 
     	return view('departamentos.Departamentos',['departamentos'=>$departamentos]);
     }
+
+    public function show($id){
+
+    	$departamentos=Departamento::where('id',$id)->get();
+
+    	return view('departamentos/Departamento')->with(['departamentos'=>$departamentos]);
+
+    }
 }

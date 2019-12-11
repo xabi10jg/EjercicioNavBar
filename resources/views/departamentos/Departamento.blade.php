@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Departamento</title>
-</head>
-<body>
+@include('layouts.nav')
 
 
 

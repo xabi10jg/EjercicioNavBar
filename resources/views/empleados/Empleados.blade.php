@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Empleados</title>
-</head>
-<body>
+@include('layouts.nav')
 
 
 
   <h2>Empleados</h2>
 
-    <table>
+    <table style="text-align: center;">
       <tr>
         <th>Id</th>
         <th>Nombre</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Proyecto Asignado</th>
       </tr>
       @foreach ($empleados as $empleado)
       <tr>
@@ -22,6 +18,7 @@
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        <td><a href="{{route('proyecto',$empleado->proyecto_id)}}">{{$empleado->proyecto_id}}</a></td>
       </tr>
       @endforeach
 

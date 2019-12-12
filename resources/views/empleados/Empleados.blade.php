@@ -18,7 +18,7 @@
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
-        <td><a href="{{route('proyecto',$empleado->proyecto_id)}}">{{$empleado->proyecto_id}}</a></td>
+        <td><a href="{{route('proyectos.show',$empleado->proyecto_id)}}">{{$empleado->proyecto_id}}</a></td>
       </tr>
       @endforeach
 

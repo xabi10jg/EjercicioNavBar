@@ -7,7 +7,7 @@
   @foreach ($proyectos as $proyecto)
 
     <ul>
-      <li>Id: {{$proyecto->id}}</li>
+      <li>Nombre: {{$proyecto->nombre}}</li>
       <li>Título: {{$proyecto->titulo}}</li>
       <li>Fecha de Inicio: {{$proyecto->fechainicio}}</li>
       <li>Fecha  de Fin: {{$proyecto->fechafin}}</li>

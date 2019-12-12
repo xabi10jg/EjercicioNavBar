@@ -12,17 +12,24 @@
       </tr>
       @foreach ($proyectos as $proyecto)
       <tr>
-        <td><a href="{{route('proyecto',$proyecto->id)}}">{{$proyecto->id}}</a></td>
+        <td><a href="{{route('proyectos.show',$proyecto->id)}}">{{$proyecto->id}}</a></td>
         <td>{{$proyecto->nombre}}</td>
         <td>{{$proyecto->titulo}}</td>
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
         <td><a href="{{route('empleado',$proyecto->empleado_id)}}">{{$proyecto->empleado_id}}</a></td>
+        <td><a href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></td>
+        <td><a href="{{route('proyectos.destroy', $proyecto->id)}}">Eliminar</a></td>
+        
         
       </tr>
       @endforeach
     </table>
+
+    <a href="{{route('proyectos.create')}}">Crear Proyecto</a>
+
+
 	
      
 

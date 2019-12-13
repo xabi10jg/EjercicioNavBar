@@ -12,6 +12,13 @@
       <li>Fecha de Inicio: {{$proyecto->fechainicio}}</li>
       <li>Fecha  de Fin: {{$proyecto->fechafin}}</li>
       <li>Empleado Encargado: <a href="{{route('empleado',$proyecto->empleado_id)}}">{{$proyecto->empleado_id}}</a></li>
+      <li>Empleados que colaboran: 
+
+        @foreach($proyecto->empleados as $empleado)
+                <a href="{{route('empleado', $empleado->id)}}">{{$empleado->id}}</a>
+            @endforeach
+
+      </li>
       </ul>
         
       @endforeach

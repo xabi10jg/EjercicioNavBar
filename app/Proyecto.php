@@ -10,5 +10,9 @@ class Proyecto extends Model
     {
         return $this->hasOne('App\Empleado');
     }
+    public function empleados()
+    {
+        return $this->belongsToMany('App\Empleado');
+    }
     
 }

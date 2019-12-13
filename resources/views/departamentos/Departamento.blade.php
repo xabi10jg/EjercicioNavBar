@@ -9,7 +9,7 @@
     <ul>
       <li>Id: {{$departamento->id}}</li>
       <li>Nombre: {{$departamento->nombre}}</li>
-      <li>
+      <li>Empleados: 
                 @foreach($departamento->empleado as $empleado)
                     <a href="{{route('empleado', $empleado->id)}}">{{$empleado->id}}</a>,  
                 @endforeach

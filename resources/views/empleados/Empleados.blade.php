@@ -11,6 +11,7 @@
         <th>Email</th>
         <th>Telefono</th>
         <th>Proyecto Asignado</th>
+        <th>Departamento</th>
       </tr>
       @foreach ($empleados as $empleado)
       <tr>
@@ -19,11 +20,13 @@
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
         <td><a href="{{route('proyectos.show',$empleado->proyecto_id)}}">{{$empleado->proyecto_id}}</a></td>
+        <td><a href="{{route('departamento',$empleado->departamento_id)}}">{{$empleado->departamento_id}}</a></td>
+        
       </tr>
       @endforeach
 
     </table>
 
 
-</body>
+</body> 
 </html>

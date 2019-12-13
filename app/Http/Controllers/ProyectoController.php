@@ -40,7 +40,7 @@ class ProyectoController extends Controller
 
         $request->validate([
 
-            'nombre' => 'required'
+            'nombre' => 'required',
             'titulo' => 'required',
             'finicio' => 'required|date',
             'ffin' => 'required|date|after:finicio',
@@ -50,14 +50,14 @@ class ProyectoController extends Controller
         ]);
 
 
-        $projecto = new Proyecto;
-        $projecto->nombre = $request -> input('nombre');
-        $projecto->titulo = $request -> input('titulo');
-        $projecto->fechainicio = $request -> input('finicio');
-        $projecto->fechafin = $request -> input('ffin');
-        $projecto->horasestimadas = $request -> input('hestimadas');
-        $projecto->empleado_id = $request -> input('eencargado');
-        $projecto->save();
+        $proyecto = new Proyecto;
+        $proyecto->nombre = $request -> input('nombre');
+        $proyecto->titulo = $request -> input('titulo');
+        $proyecto->fechainicio = $request -> input('finicio');
+        $proyecto->fechafin = $request -> input('ffin');
+        $proyecto->horasestimadas = $request -> input('hestimadas');
+        $proyecto->empleado_id = $request -> input('eencargado');
+        $proyecto->save();
         return redirect(route('proyectos.index'));
     }
 

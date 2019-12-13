@@ -7,6 +7,7 @@
       <th>Id</th>
       <th>Nombre</th>
       <th>Empleados</th>
+      <th>Jefe de Departamento</th>
     </tr>
     @foreach($departamentos as $departamento)
     <tr>
@@ -17,6 +18,7 @@
           <a href="{{route('empleado', $empleado->id)}}">{{$empleado->id}}</a>  
         @endforeach
       </td>
+      <td><a href="{{route('empleado', $departamento->jefe_id)}}">{{$departamento->jefe_id}}</a></td>
     </tr>
     @endforeach
 

@@ -18,6 +18,8 @@
               <a href="{{route('proyectos.show', $proyecto->id)}}">{{$proyecto->id}}</a>
           @endforeach
       </li>
+
+      <li>Jefe de Departamento: <a href="{{route('departamento', $empleado->jefe->id)}}">{{$empleado->jefe->id}}</a></li>
       
       </ul>
         

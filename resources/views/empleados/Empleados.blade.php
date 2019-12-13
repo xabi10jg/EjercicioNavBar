@@ -13,6 +13,7 @@
         <th>Proyecto Asignado</th>
         <th>Departamento</th>
         <th>Proyectos que colabora</th>
+        <th>Jefe de Departamento: </th>
       </tr>
       @foreach ($empleados as $empleado)
       <tr>
@@ -27,6 +28,7 @@
               <a href="{{route('proyectos.show', $proyecto->id)}}">{{$proyecto->id}}</a>
             @endforeach
         </td>
+        <td><a href="{{route('departamento', $empleado->jefe->id)}}">{{$empleado->jefe->id}}</a></td>
         
       </tr>
       @endforeach
